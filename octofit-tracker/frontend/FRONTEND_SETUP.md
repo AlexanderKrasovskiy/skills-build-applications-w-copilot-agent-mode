@@ -68,12 +68,14 @@ https://{CODESPACE_NAME}-8000.app.github.dev/api/{endpoint}/
 ### Response Handling
 
 Components handle both:
+
 - Paginated responses: `{ results: [...] }`
 - Plain array responses: `[...]`
 
 ### Debugging
 
 All components include `console.log()` statements that log:
+
 - The API endpoint being called
 - The fetched data
 - Any errors encountered

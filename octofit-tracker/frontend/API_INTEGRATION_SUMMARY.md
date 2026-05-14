@@ -50,6 +50,7 @@ This document outlines all updates made to the OctoFit Tracker React frontend to
 ## Files Modified
 
 ### App.js
+
 - Added BrowserRouter setup from react-router-dom
 - Created navigation bar with links to all components
 - Set up routing with Routes component
@@ -58,6 +59,7 @@ This document outlines all updates made to the OctoFit Tracker React frontend to
 - Bootstrap navbar with responsive design
 
 ### App.css
+
 - Replaced original boilerplate styling
 - Added navbar, card, and table styling
 - Added animations and hover effects
@@ -65,6 +67,7 @@ This document outlines all updates made to the OctoFit Tracker React frontend to
 - Responsive design enhancements
 
 ### index.js
+
 - Already properly configured (no changes needed)
 - Uses Bootstrap CSS
 - Renders App component with React.StrictMode
@@ -72,24 +75,31 @@ This document outlines all updates made to the OctoFit Tracker React frontend to
 ## API Integration Features
 
 ### URL Construction
+
 ```javascript
-const codesspaceName = process.env.REACT_APP_CODESPACE_NAME || 
+const codesspaceName =
+  process.env.REACT_APP_CODESPACE_NAME ||
   window.location.hostname.split('-')[0];
 const apiUrl = `https://${codesspaceName}-8000.app.github.dev/api/{endpoint}/`;
 ```
 
 ### Response Handling
+
 All components handle both response formats:
+
 - Paginated: `data.results`
 - Plain array: `data`
 
 ### Console Logging
+
 Each component includes logging for:
+
 - API endpoint being called
 - Fetched data
 - Error messages
 
 Example:
+
 ```javascript
 console.log(`Fetching users from: ${apiUrl}`);
 console.log('Users data received:', data);
@@ -123,6 +133,7 @@ src/
 ## Dependencies
 
 All required dependencies are already in `package.json`:
+
 - react@19.2.6
 - react-dom@19.2.6
 - react-router-dom@7.15.0
@@ -152,6 +163,7 @@ The frontend will run on `http://localhost:3000`
    - Any error messages
 
 Example console output:
+
 ```
 Fetching users from: https://codespace-name-8000.app.github.dev/api/users/
 Users data received: [{id: 1, username: "user1", ...}]
