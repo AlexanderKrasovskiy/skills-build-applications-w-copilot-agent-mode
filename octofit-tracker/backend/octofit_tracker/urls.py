@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from octofit_tracker.api_root import api_root
 
+# Use the request host and proxy headers to build API endpoint URLs.
+# In Codespaces this will resolve to https://$CODESPACE_NAME-8000.app.github.dev/api/...
 urlpatterns = [
     path('', api_root, name='api-root'),
     path('admin/', admin.site.urls),
